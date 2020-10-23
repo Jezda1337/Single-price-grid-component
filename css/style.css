@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'karla', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  width: 1440px;
+}
+
+@media (max-width: 375px) {
+  body {
+    width: 375px;
+    height: 100%;
+  }
+}
+
+body .container {
+  width: 650px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'box1 box1' 'box2 box3';
+  -webkit-box-shadow: 0 0 5px #e5eff5;
+          box-shadow: 0 0 5px #e5eff5;
+  border-radius: 7px;
+}
+
+@media (max-width: 375px) {
+  body .container {
+    width: 375px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body .container .box1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: box1;
+  padding: 2rem;
+}
+
+body .container .box1 h2 {
+  color: #2ab2af;
+}
+
+body .container .box1 h3 {
+  color: #c0df34;
+}
+
+body .container .box1 p {
+  line-height: 1.5rem;
+  color: #98a6bd;
+}
+
+body .container .box2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: box2;
+  padding: 2rem;
+  background-color: #2ab2af;
+  color: #fff;
+}
+
+body .container .box2 h2 {
+  margin-bottom: 0;
+}
+
+body .container .box2 .boxPricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .box2 .boxPricing span {
+  font-size: 1.5rem;
+  padding-right: .5rem;
+}
+
+body .container .box2 .boxPricing p {
+  margin: 1.5rem 0;
+}
+
+body .container .box2 p {
+  margin-top: 0;
+}
+
+body .container .box2 .btn {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: .5rem 1rem;
+  background-color: #c0df34;
+  color: #fff;
+  margin-top: 1rem;
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+body .container .box3 {
+  padding: 2rem;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: box3;
+  color: #e5eff5;
+  background-color: #4ABEBD;
+}
+/*# sourceMappingURL=style.css.map */

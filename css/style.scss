@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'karla', sans-serif;
+}
+
+$mobile: 375px;
+$desktop: 1440px;
+
+$cyan: hsl(179,62%,43%);
+$b-yellow: hsl(71, 73%, 54%);
+$l-gray:hsl(204, 43%, 93%);
+$g-blue: hsl(218, 22%, 67%);
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    width: $desktop;
+    @media(max-width:$mobile) {
+        width: $mobile;
+        height: 100%;
+    }
+
+    .container {
+        width: 650px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 'box1 box1' 'box2 box3';
+        // padding: 2rem;
+        box-shadow: 0 0 5px $l-gray;
+        border-radius: 7px;
+
+        @media(max-width:$mobile) {
+            // background: red;
+            width: $mobile;
+            display: flex;
+            flex-direction: column;
+        }
+        .box1 {
+            grid-area: box1;
+            padding: 2rem;
+            h2 {
+                color: $cyan;
+            }
+            h3 {
+                color: $b-yellow;
+            }
+            p{
+                line-height: 1.5rem;
+                color: $g-blue;
+            }
+        }
+
+        .box2 {
+            grid-area: box2;
+            padding: 2rem;
+            background-color: $cyan;
+            color: #fff;
+            h2 {
+                margin-bottom: 0;
+            }
+            .boxPricing {
+                display: flex;
+                align-items: center;
+
+                span {
+                    font-size: 1.5rem;
+                    padding-right: .5rem;
+                }
+                p {
+                    margin: 1.5rem 0;
+                }
+            }
+            p{
+                margin-top: 0;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 1.4rem;
+                font-weight: 700;
+                border: none;
+                outline: none;
+                border-radius: 7px;
+                padding: .5rem 1rem;
+                background-color: $b-yellow;
+                color: #fff;
+                margin-top: 1rem;
+                box-shadow: 0 3px 4px rgba(0,0,0,0.2)
+            }
+
+        }
+
+        .box3 {
+            padding: 2rem;
+            grid-area: box3;
+
+            color: $l-gray;
+            background-color:#4ABEBD;
+        }
+    }
+}
+
+
